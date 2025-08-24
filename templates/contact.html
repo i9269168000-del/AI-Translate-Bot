@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Flask Web Server{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-5 fw-bold text-center mb-5">Get in Touch</h1>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                Contact Information
+                            </h3>
+                            <p class="card-text">
+                                We'd love to hear from you! Use the form to send us a message, 
+                                and we'll get back to you as soon as possible.
+                            </p>
+                            
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-server text-info me-3"></i>
+                                    <div>
+                                        <strong>Server Status:</strong><br>
+                                        <span class="text-success">Online and Running</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-code text-warning me-3"></i>
+                                    <div>
+                                        <strong>Framework:</strong><br>
+                                        Flask with Python
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-clock text-secondary me-3"></i>
+                                    <div>
+                                        <strong>Response Time:</strong><br>
+                                        Typically within 24 hours
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fas fa-paper-plane text-success me-2"></i>
+                                Send us a Message
+                            </h3>
+                            
+                            <form method="POST" action="{{ url_for('contact') }}">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-success w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Flask Web Server Demo</h4>
+                            <p class="card-text">
+                                This contact form demonstrates Flask's form handling capabilities, 
+                                including POST request processing, form validation, and flash messaging.
+                            </p>
+                            <div class="row text-center mt-4">
+                                <div class="col-md-4">
+                                    <i class="fas fa-shield-alt display-6 text-success mb-2"></i>
+                                    <h6>Secure</h6>
+                                    <small class="text-muted">CSRF protection and form validation</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fas fa-tachometer-alt display-6 text-info mb-2"></i>
+                                    <h6>Fast</h6>
+                                    <small class="text-muted">Optimized Flask application</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fas fa-mobile-alt display-6 text-warning mb-2"></i>
+                                    <h6>Responsive</h6>
+                                    <small class="text-muted">Works on all devices</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

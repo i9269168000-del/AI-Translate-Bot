@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}About - Flask Web Server{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-5 fw-bold text-center mb-5">About This Project</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <i class="fas fa-info-circle text-primary me-2"></i>
+                        Project Overview
+                    </h3>
+                    <p class="card-text">
+                        This is a demonstration Flask web server that showcases fundamental web development 
+                        concepts including routing, template rendering, static file serving, and responsive design. 
+                        The application is built following modern web development best practices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <i class="fas fa-cogs text-success me-2"></i>
+                        Technical Features
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Flask web framework with multiple routes
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Jinja2 template engine for dynamic content
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Bootstrap 5 for responsive design
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Error handling for 404 and 500 errors
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Static file serving for CSS and JavaScript
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Flash messaging system for user feedback
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <i class="fas fa-layer-group text-info me-2"></i>
+                        Architecture
+                    </h3>
+                    <p class="card-text">
+                        The application follows a clean project structure with separated concerns:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><strong>app.py:</strong> Main Flask application with route definitions</li>
+                        <li><strong>templates/:</strong> Jinja2 HTML templates with base template inheritance</li>
+                        <li><strong>static/:</strong> CSS, JavaScript, and other static assets</li>
+                        <li><strong>main.py:</strong> Application entry point</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <i class="fas fa-rocket text-warning me-2"></i>
+                        Getting Started
+                    </h3>
+                    <p class="card-text">
+                        This Flask application runs on port 5000 and is configured for development mode 
+                        with debug logging enabled. The application uses environment variables for 
+                        configuration and follows security best practices.
+                    </p>
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
