@@ -12,7 +12,7 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 # Проверка на наличие ключей
 if not all([LINE_CHANNEL_ACCESS_TOKEN, LINE_CHANNEL_SECRET, OPENAI_API_KEY]):
-    print("Ошибка: Отсутствуют переменные окружения. Проверьте настройки Secrets в Replit.")
+    print("Ошибка: Отсутствуют переменные окружения. Пожалуйста, убедитесь, что вы настроили все ключи на Render.com.")
     exit()
 
 # Инициализация API
